@@ -8,9 +8,7 @@ const spawnChildProcess = async (args = []) => {
     "../files/script.js",
   );
 
-  child_process.spawn("node", [filePath, ...args], {
-    stdio: "inherit",
-  });
+  child_process.fork(filePath, args);
 };
 
 // Put your arguments in function call to test this functionality
